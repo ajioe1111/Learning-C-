@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Введите имя пользователя: ");
-string usernames = Console.ReadLine();
+string? usernames = Console.ReadLine();
 
 if (usernames == "Masha")
 {
