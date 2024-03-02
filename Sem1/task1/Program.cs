@@ -1,19 +1,24 @@
-﻿// Задача №0
+﻿// Задача №1
 // Напишите программу, которая на вход принимает
-// число и выдаёт его квадрат (число умноженное на
-// само себя).
-// Например: 4 -> 16 -3 -> 9 -7 -> 49
+// два числа и проверяет, является ли первое число
+// квадратом второго.
+// Например:
+// a = 25; b = 5 -> да
+// a = 2 b = 10 -> нет
+// a = 9; b = -3 -> да
+// a = -3 b = 9 -> нет
 
-Console.WriteLine("Введите число для вывода его в квадрат: ");
-string? inputNum = Console.ReadLine();
+Console.WriteLine("Введите первое число: ");
+int a = int.Parse(Console.ReadLine());
 
-//Проверяем на нуль
-if (inputNum != null)
+Console.WriteLine("Введите второе число: ");
+int b = int.Parse(Console.ReadLine());
+
+if (a == b * b)
 {
-    int number = int.Parse(inputNum); //Парсим строку в число
-    // int outNum = number * number;
-    int outNum = (int)Math.Pow(number, 2);
-    Console.WriteLine("Квадрат числа " + number + " равен " + outNum);
-
-    // Console.WriteLine("Квадрат числа: "+Math.Pow(int.Parse(inputNum), 2)); В одну строку
+    Console.WriteLine("да");
+}
+else
+{
+    Console.WriteLine("нет");
 }

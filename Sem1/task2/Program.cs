@@ -1,24 +1,44 @@
-﻿// Задача №1
-// Напишите программу, которая на вход принимает
-// два числа и проверяет, является ли первое число
-// квадратом второго.
+﻿// Задача №3
+// Напишите программу, которая будет выдавать
+// название дня недели по заданному номеру.
 // Например:
-// a = 25; b = 5 -> да
-// a = 2 b = 10 -> нет
-// a = 9; b = -3 -> да
-// a = -3 b = 9 -> нет
+// 3 -> Среда
+// 5 -> Пятница
 
-Console.WriteLine("Введите первое число: ");
-int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите номер дня недели: ");
+string input = Console.ReadLine();
 
-Console.WriteLine("Введите второе число: ");
-int b = int.Parse(Console.ReadLine());
+// Попытка преобразовать введенную строку в число
+bool isSuccess = int.TryParse(input, out int dayNumber);
 
-if (a == b * b)
+if (isSuccess && dayNumber >= 1 && dayNumber <= 7)
 {
-    Console.WriteLine("да");
+    switch (dayNumber)
+    {
+        case 1:
+            Console.WriteLine("Понедельник");
+            break;
+        case 2:
+            Console.WriteLine("Вторник");
+            break;
+        case 3:
+            Console.WriteLine("Среда");
+            break;
+        case 4:
+            Console.WriteLine("Четверг");
+            break;
+        case 5:
+            Console.WriteLine("Пятница");
+            break;
+        case 6:
+            Console.WriteLine("Суббота");
+            break;
+        case 7:
+            Console.WriteLine("Воскресенье");
+            break;
+    }
 }
 else
 {
-    Console.WriteLine("нет");
+    Console.WriteLine("Некорректный ввод. Введите число от 1 до 7.");
 }
