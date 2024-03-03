@@ -5,4 +5,14 @@
 // 1 -> нет
 // Сделать вариант с использованием конструкции Dictionary
 
+Dictionary<int, bool> weekends = new Dictionary<int, bool>
+{
+    {6, true},
+    {7, true}
+};
 
+Console.WriteLine("Введите цифру, обозначающую день недели (1-7): ");
+int dayNumber = Convert.ToInt32(Console.ReadLine());
+bool isWeekend = weekends.ContainsKey(dayNumber);
+
+Console.WriteLine(isWeekend ? "да": "нет");
