@@ -9,7 +9,7 @@
 
 System.Random numSintezator = new System.Random();
 
-// int num = new Random().Next(100, 1000);
+// int num = new Random().Next(10, 100);
 // Console.WriteLine(num);
 
 //Вариант 1
