@@ -9,6 +9,9 @@
 
 System.Random numSintezator = new System.Random();
 
+// int num = new Random().Next(100, 1000);
+// Console.WriteLine(num);
+
 //Вариант 1
 int rndNumber = numSintezator.Next(10, 100);
 Console.WriteLine(rndNumber);
